@@ -1,0 +1,43 @@
+╔══════════════════════════════════════════════════╗
+║   MAPEG Öteleme Aracı v2.0 - Kurulum Rehberi    ║
+╚══════════════════════════════════════════════════╝
+
+EXE OLUŞTURMA (Tek Seferlik)
+═════════════════════════════
+
+1. https://www.python.org/downloads/ adresinden Python indirin
+   - Kurulumda "Add Python to PATH" kutusunu İŞARETLEYİN
+   
+2. Bu klasördeki "exe_olustur.bat" dosyasına çift tıklayın
+   - PyInstaller otomatik kurulur
+   - MAPEG_Oteleme.exe oluşturulur (1-2 dakika)
+   
+3. Artık sadece MAPEG_Oteleme.exe kullanın
+   - Python'u kaldırabilirsiniz bile
+
+
+KULLANIM
+════════
+
+1. MAPEG_Oteleme.exe'yi açın (veya MAPEG_Oteleme.py'yi Python ile)
+
+2. DXF dosyasını seçin
+   - TELKESME, SEVALT layerları olmalı
+   
+3. TXT koordinat dosyasını seçin  
+   - NetCAD'den export: NoktaNo Y X Z
+   
+4. BAŞLAT'a tıklayın
+
+5. Çıktılar DXF ile aynı klasöre kaydedilir:
+   - *_TUMU.ncn    → Tüm noktalar numaralı + ötelenmiş
+   - *_otelenmis.dxf → Sadece offset POINT'ler
+
+
+NETCAD'DE IMPORT
+════════════════
+
+1. Orijinal NCZ'yi açın
+2. Nokta Editörü → Dosya → Yükle → _TUMU.ncn
+3. "Eskilerle Değiştir" seçin
+4. Çizime Sakla

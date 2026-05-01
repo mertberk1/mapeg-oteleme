@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.spec
+
+# EXE
+*.exe
+
+# NetCAD
+*.ncz
+*.NCZ
+*.dxf
+*.DXF
+
+# OS
+.DS_Store
+Thumbs.db
