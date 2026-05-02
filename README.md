@@ -1,3 +1,4 @@
+[README.md](https://github.com/user-attachments/files/27299970/README.md)
 # ⛏ MAPEG Öteleme Aracı
 
 Maden sahalarının İşletme Faaliyet Raporları için **İmalat Haritası** çizimlerinde kullanılan otomatik öteleme ve numaralama aracı.
@@ -8,9 +9,9 @@ MAPEG harita standartlarına göre şev altı noktalarına dik yönde 20cm ötel
 
 Maden sahalarında her yıl Nisan ayında MAPEG'e sunulan İşletme Faaliyet Raporları için İmalat Haritası çizimlerinde:
 
-- **Şev altı** çizgilerindeki noktaların 20cm dışarı ötelenmesi
-- Ötelenmiş noktaya orijinal noktayla **aynı numara** verilmesi  
-- Tüm "0" adlı noktalara **sıralı numara** atanması
+* **Şev altı** çizgilerindeki noktaların 20cm dışarı ötelenmesi
+* Ötelenmiş noktaya orijinal noktayla **aynı numara** verilmesi
+* Tüm "0" adlı noktalara **sıralı numara** atanması
 
 işlemlerini **otomatik** yapar. NetCAD + DXF üzerinden elle yapılan bu işlem saatler sürerken, bu araçla **saniyeler** içinde tamamlanır.
 
@@ -18,25 +19,25 @@ işlemlerini **otomatik** yapar. NetCAD + DXF üzerinden elle yapılan bu işlem
 
 Programı çalıştırdığınızda karşınıza gelen arayüz:
 
-- DXF ve TXT dosyalarını seçin
-- Öteleme mesafesini ayarlayın
-- BAŞLAT'a tıklayın
-- NCN + DXF dosyaları otomatik oluşur
+* DXF ve TXT dosyalarını seçin
+* Öteleme mesafesini ayarlayın
+* BAŞLAT'a tıklayın
+* NCN + DXF dosyaları otomatik oluşur
 
 ## 📋 Gereksinimler
 
-- **Python 3.6+** (sadece .exe oluşturmak için)
-- Ek kütüphane gerektirmez (tkinter, math, re — hepsi built-in)
-- .exe oluşturduktan sonra Python'a ihtiyaç kalmaz
+* **Python 3.6+** (sadece .exe oluşturmak için)
+* Ek kütüphane gerektirmez (tkinter, math, re — hepsi built-in)
+* .exe oluşturduktan sonra Python'a ihtiyaç kalmaz
 
 ## 🚀 Kurulum
 
 ### Yöntem 1 — EXE olarak (Önerilen)
 
-```bash
+```
 # 1. Python yükleyin (python.org)
 # 2. Repoyu indirin
-git clone https://github.com/KULLANICI_ADINIZ/mapeg-oteleme.git
+git clone https://github.com/mertberk1/mapeg-oteleme.git
 cd mapeg-oteleme
 
 # 3. EXE oluşturun
@@ -47,7 +48,7 @@ Artık `MAPEG_Oteleme.exe` dosyasını kullanabilirsiniz. Python gerekmez.
 
 ### Yöntem 2 — Python ile
 
-```bash
+```
 python MAPEG_Oteleme.py
 ```
 
@@ -56,14 +57,15 @@ python MAPEG_Oteleme.py
 ### 1. Dosya Hazırlığı
 
 NetCAD'den iki dosya export edin:
-- **DXF dosyası** — `TELKESME`, `SEVALT`, `SEVUST` layerları içermeli
-- **TXT koordinat dosyası** — TELKESME noktaları: `NoktaNo Y X Z`
+
+* **DXF dosyası** — `TELKESME`, `SEVALT`, `SEVUST` layerları içermeli
+* **TXT koordinat dosyası** — TELKESME noktaları: `NoktaNo Y X Z`
 
 ### 2. Programı Çalıştırın
 
 1. `MAPEG_Oteleme.exe`'yi açın
 2. DXF dosyasını seçin
-3. TXT koordinat dosyasını seçin  
+3. TXT koordinat dosyasını seçin
 4. Öteleme mesafesini ayarlayın (varsayılan: 0.20m)
 5. **BAŞLAT**'a tıklayın
 
@@ -72,11 +74,12 @@ NetCAD'den iki dosya export edin:
 Program iki dosya üretir:
 
 | Dosya | İçerik |
-|-------|--------|
+| --- | --- |
 | `*_TUMU.ncn` | Tüm noktalar (numaralı) + ötelenmiş noktalar |
 | `*_otelenmis.dxf` | Sadece ötelenmiş POINT entity'leri |
 
 **NetCAD'de import:**
+
 1. Orijinal NCZ projesini açın
 2. **Nokta Editörü → Dosya → Yükle** → `_TUMU.ncn` dosyasını seçin
 3. **Çizime Sakla**
@@ -94,10 +97,10 @@ Program iki dosya üretir:
 
 ### Dosya Formatları
 
-- **Girdi DXF**: AutoCAD DXF (AC1018+), cp1254 encoding
-- **Girdi TXT**: `NoktaNo Y X Z` (boşluk/virgül/tab ayrımlı)
-- **Çıktı NCN**: `NoktaAdi Y X Z` (NetCAD native format)
-- **Çıktı DXF**: Orijinal DXF + OTELEME layerında POINT entity'leri
+* **Girdi DXF**: AutoCAD DXF (AC1018+), cp1254 encoding
+* **Girdi TXT**: `NoktaNo Y X Z` (boşluk/virgül/tab ayrımlı)
+* **Çıktı NCN**: `NoktaAdi Y X Z` (NetCAD native format)
+* **Çıktı DXF**: Orijinal DXF + OTELEME layerında POINT entity'leri
 
 ## 📁 Dosya Yapısı
 
@@ -109,14 +112,11 @@ mapeg-oteleme/
 └── README.md           # Bu dosya
 ```
 
-## 🤝 Katkıda Bulunma
 
 Pull request'ler memnuniyetle karşılanır. Büyük değişiklikler için lütfen önce bir issue açın.
 
-## 📄 Lisans
 
-[MIT](LICENSE)
 
-## 🏗️ Geliştirici Notları
+Bu araç, bir maden danışmanlık firmasında çalışırken karşılaştığım gerçek bir iş yükü problemine çözüm olarak geliştirilmiştir. NetCAD üzerinde manuel yapıldığında 3 güne kadar uzayan öteleme işlemini, 1-2 dakikaya indirir.
 
-Bu araç, maden mühendisleri için NetCAD üzerinden yapılan MAPEG İmalat Haritası öteleme işlemini otomatikleştirmek amacıyla geliştirilmiştir. Sadece Python standart kütüphanelerini kullanır, harici bağımlılık yoktur.
+Maden mühendisleri için NetCAD üzerinden yapılan MAPEG İmalat Haritası öteleme işlemini otomatikleştirmek amacıyla tasarlanmıştır. Sadece Python standart kütüphanelerini kullanır, harici bağımlılık yoktur.
